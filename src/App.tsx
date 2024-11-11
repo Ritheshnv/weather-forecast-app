@@ -21,9 +21,9 @@ const App: React.FC = () => {
         throw new Error('Please enter a location');
       }
 
-      const {longitude, latitude, country, timezone, name} = await fetchLocationData(location);
+      const {longitude, latitude, country, name} = await fetchLocationData(location);
 
-      setLocation(`${name}, ${country}, ${timezone}`);
+      setLocation(`${name}, ${country}`);
 
     
       const data = await fetchWeatherData(latitude, longitude);
